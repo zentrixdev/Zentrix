@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Products - Zentrix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media'
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 shadow-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <h1 class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Zentrix</h1>
+
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html#home" class="hover:text-indigo-500 transition">Home</a>
+                <a href="index.html#about" class="hover:text-indigo-500 transition">About</a>
+                <a href="products.html" class="text-indigo-600 font-semibold">Products</a>
+                <a href="index.html#careers" class="hover:text-indigo-500 transition">Careers</a>
+                <a href="index.html#contact" class="hover:text-indigo-500 transition">Contact</a>
+            </nav>
+
+            <button id="menuBtn" aria-label="Open Menu" class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Sidebar -->
+        <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 dark:bg-black dark:bg-opacity-60 z-40 hidden">
+            <aside id="menuPanel" class="fixed top-0 left-0 w-64 h-full bg-white dark:bg-gray-900 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out">
+                <div class="flex items-center justify-between px-6 py-4 border-b dark:border-gray-700">
+                    <h2 class="text-xl font-bold text-indigo-600 dark:text-indigo-400">Menu</h2>
+                    <button id="closeMenu" aria-label="Close Menu" class="text-gray-700 dark:text-gray-300 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <nav class="flex flex-col mt-6 px-6 space-y-6 text-lg font-medium">
+                    <a href="index.html#home" onclick="closeMobileMenu()" class="hover:text-indigo-500 transition">Home</a>
+                    <a href="index.html#about" onclick="closeMobileMenu()" class="hover:text-indigo-500 transition">About</a>
+                    <a href="products.html" onclick="closeMobileMenu()" class="text-indigo-600 dark:text-indigo-400 font-semibold">Products</a>
+                    <a href="index.html#careers" onclick="closeMobileMenu()" class="hover:text-indigo-500 transition">Careers</a>
+                    <a href="index.html#contact" onclick="closeMobileMenu()" class="hover:text-indigo-500 transition">Contact</a>
+                </nav>
+            </aside>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-4xl font-extrabold mb-6 text-center">Our Products</h2>
+
+        <!-- Search bar -->
+        <div class="mb-10 text-center">
+            <input
+            id="searchInput"
+            type="text"
+            placeholder="Search products..."
+            class="w-full max-w-md p-3 rounded-lg border dark:border-gray-700 dark:bg-gray-800"
+            />
+        </div>
+
+        <div id="productsContainer" class="grid md:grid-cols-3 gap-10">
+            <div class="product-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow border dark:border-gray-700" data-name="zyro ai">
+                <h3 class="text-2xl font-semibold mb-2">Zyro AI</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                    A fast, lightweight AI chatbot powered by LLaMA 3 — great for productivity, writing, and learning.
+                </p>
+                <a href="/zyro" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">Learn more →</a>
+            </div>
+
+            <div class="product-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow border dark:border-gray-700" data-name="drivex">
+                <h3 class="text-2xl font-semibold mb-2">DriveX</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                    A local-first file manager with cloud-style features: multi-user login, dashboard, uploads, and more.
+                </p>
+                <a href="/drivex" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">Learn more →</a>
+            </div>
+
+            <div class="product-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow border dark:border-gray-700" data-name="zentrix cloud">
+                <h3 class="text-2xl font-semibold mb-2">Zentrix Cloud</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                    A developer-friendly AI deployment platform with autoscaling, pipelines, and insights — no config needed.
+                </p>
+                <a href="/zentrix-cloud" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">Learn more →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-900 py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-600 dark:text-gray-400 text-sm">
+            <div>
+                &copy; 2025 Zentrix Inc. All rights reserved.
+            </div>
+            <div class="mt-2 space-x-4">
+                <a href="privacy.html" class="underline hover:text-gray-800 dark:hover:text-gray-200">Privacy Policy</a>
+                <a href="/terms" class="underline hover:text-gray-800 dark:hover:text-gray-200">Terms of Service</a>
+                <a href="index.html#contact" class="underline hover:text-gray-800 dark:hover:text-gray-200">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuPanel = document.getElementById("menuPanel");
+        const closeMenu = document.getElementById("closeMenu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.remove("hidden");
+            // Delay to allow DOM update before removing translate-x
+            requestAnimationFrame(() => {
+                menuPanel.classList.remove("-translate-x-full");
+            });
+        });
+
+        closeMenu.addEventListener("click", () => {
+            menuPanel.classList.add("-translate-x-full");
+            setTimeout(() => {
+                mobileMenu.classList.add("hidden");
+            }, 300); // Match the transition duration
+        });
+
+        // Close when clicking outside the menuPanel
+        mobileMenu.addEventListener("click", (e) => {
+            if (!menuPanel.contains(e.target)) {
+                menuPanel.classList.add("-translate-x-full");
+                setTimeout(() => {
+                    mobileMenu.classList.add("hidden");
+                }, 300);
+            }
+        });
+
+        function closeMobileMenu() {
+            menuPanel.classList.add("-translate-x-full");
+            setTimeout(() => {
+                mobileMenu.classList.add("hidden");
+            },
+                300);
+        }
+
+        // Search filter
+        document.getElementById("searchInput").addEventListener("input", function () {
+            const keyword = this.value.toLowerCase();
+            const cards = document.querySelectorAll(".product-card");
+            cards.forEach(card => {
+                const name = card.dataset.name;
+                card.style.display = name.includes(keyword) ? "block": "none";
+            });
+        });
+
+        // Copy+Contest Menu disabled
+         document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+    </script>
+</body>
+</html>

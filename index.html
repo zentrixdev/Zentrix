@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="description" content="Zentrix - Innovative AI and Web Tech startup building next-gen products for a smarter world." />
+    <meta name="keywords" content="Zentrix, AI startup, Web app, AI assistant, Cloud, Tech Solo Company" />
+    <meta name="author" content="Hz" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <meta property="og:title" content="Zentrix - Innovate with AI and Web Tech" />
+    <meta property="og:description" content="Zentrix is an AI-driven startup creating next-gen tools for businesses and creators." />
+    <meta property="og:image" content="https://zentrix.com/og-image.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="#" />
+    <meta name="twitter:title" content="Zentrix - Innovate with AI and Web Tech" />
+    <meta name="twitter:description" content="Zentrix is an AI-driven startup creating next-gen tools for businesses and creators." />
+    <meta name="twitter:image" content="https://zentrix.com/og-image.png" />
+
+    <title>Zentrix</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+        }
+    </script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-white dark:bg-gray-900 shadow-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <h1 class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Zentrix</h1>
+
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-indigo-500 transition">Home</a>
+                <a href="#about" class="hover:text-indigo-500 transition">About</a>
+                <a href="#products" class="hover:text-indigo-500 transition">Products</a>
+                <a href="#careers" class="hover:text-indigo-500 transition">Careers</a>
+                <a href="#contact" class="hover:text-indigo-500 transition">Contact</a>
+            </nav>
+
+            <button id="menuBtn" aria-label="Open Menu" class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Sidebar -->
+        <div id="mobileMenu" class="fixed inset-0 bg-white dark:bg-gray-900 z-50 hidden">
+            <aside id="menuPanel" class="fixed top-0 left-0 w-64 max-w-full h-full bg-white dark:bg-gray-900 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+                <div class="flex items-center justify-between px-6 py-4 border-b dark:border-gray-700">
+                    <h2 class="text-xl font-bold text-indigo-600 dark:text-indigo-400 truncate">Menu</h2>
+                    <button id="closeMenu" aria-label="Close Menu" class="text-gray-700 dark:text-gray-300 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <nav class="flex flex-col mt-6 px-6 space-y-6 text-lg font-medium">
+                    <a href="#home" class="hover:text-indigo-500 transition break-words" onclick="closeMobileMenu()">Home</a>
+                    <a href="#about" class="hover:text-indigo-500 transition break-words" onclick="closeMobileMenu()">About</a>
+                    <a href="#products" class="hover:text-indigo-500 transition break-words" onclick="closeMobileMenu()">Products</a>
+                    <a href="#careers" class="hover:text-indigo-500 transition break-words" onclick="closeMobileMenu()">Careers</a>
+                    <a href="#contact" class="hover:text-indigo-500 transition break-words" onclick="closeMobileMenu()">Contact</a>
+                </nav>
+            </aside>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="pt-32 pb-24 text-center fade-in">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-5xl font-extrabold mb-6 leading-tight">Innovate with Zentrix</h2>
+            <p class="text-lg mb-6">
+                Building the future with AI, Web3, and scalable tech.
+            </p>
+            <a href="#products" class="inline-block px-8 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition shadow">Explore Products</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-gray-50 dark:bg-gray-800 fade-in">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-4">Who We Are</h3>
+            <p class="text-lg text-gray-700 dark:text-gray-300">
+                Zentrix is an AI-driven startup creating next-gen tools for businesses and creators. We're building smarter experiences for a smarter world.
+            </p>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="py-24 fade-in">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-10">Our Products</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow border dark:border-gray-700 transition hover:scale-105">
+                    <h4 class="text-xl font-semibold mb-2">Zyro AI</h4>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        AI assistant for productivity, code, and creativity.
+                    </p>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow border dark:border-gray-700 transition hover:scale-105">
+                    <h4 class="text-xl font-semibold mb-2">DriveX</h4>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Secure, self-hosted file manager with cloud features.
+                    </p>
+                </div>
+                <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow border dark:border-gray-700 transition hover:scale-105">
+                    <h4 class="text-xl font-semibold mb-2">Zentrix Cloud</h4>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        Scale and deploy AI apps with automation tools.
+                    </p>
+                </div>
+            </div>
+
+            <!-- View All Projects Button -->
+            <div class="mt-10">
+                <a href="products.html"
+                    class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium"
+                    aria-label="View all products">
+                    View All
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers -->
+    <section id="careers" class="py-24 bg-gray-100 dark:bg-gray-900 fade-in">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h3 class="text-3xl font-bold mb-4">Careers</h3>
+            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                Join our mission to shape the future. We're hiring engineers, designers, and visionaries.
+            </p>
+            <a href="mailto:zentrixworks@gmail.com
+?subject=Job Inquiry&body=Hi, I'm interested in your open roles." 
+   class="inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition">
+   See Open Roles
+</a>
+ </div>
+    </section>
+
+   <!-- Contact -->
+<section id="contact" class="py-24 fade-in bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h3 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-6">Contact Us</h3>
+    <p class="text-gray-600 dark:text-gray-300 mb-10">
+      We’d love to hear from you. Send us a message and we’ll respond as soon as possible.
+    </p>
+
+    <form class="grid gap-5 max-w-xl mx-auto text-left" onsubmit="event.preventDefault(); alert('Thank you! We’ll be in touch.')">
+
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Name</label>
+        <input id="name" type="text" placeholder="Jane Doe" required
+               class="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-700
+                      bg-white dark:bg-gray-800 text-gray-900 dark:text-white
+                      focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" />
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Email</label>
+        <input id="email" type="email" placeholder="you@example.com" required
+               class="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-700
+                      bg-white dark:bg-gray-800 text-gray-900 dark:text-white
+                      focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" />
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Message</label>
+        <textarea id="message" rows="4" placeholder="How can we help you?" required
+                  class="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-700
+                         bg-white dark:bg-gray-800 text-gray-900 dark:text-white
+                         focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"></textarea>
+      </div>
+
+      <div class="text-center mb-0">
+        <button type="submit"
+                class="inline-block px-8 py-3 bg-indigo-600 text-white rounded-xl
+                       font-semibold hover:bg-indigo-700 transition-all duration-300
+                       shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-100 dark:bg-gray-900 py-8">
+  <div class="max-w-7xl mx-auto px-6 text-center text-gray-600 dark:text-gray-400 text-sm">
+    <div>
+      &copy; 2025 Zentrix Inc. All rights reserved.
+    </div>
+    <div class="mt-2 space-x-4">
+      <a href="privacy.html" class="underline hover:text-gray-800 dark:hover:text-gray-200">Privacy Policy</a>
+      <a href="/terms" class="underline hover:text-gray-800 dark:hover:text-gray-200">Terms of Service</a>
+      <a href="#contact" class="underline hover:text-gray-800 dark:hover:text-gray-200">Contact Us</a>
+    </div>
+  </div>
+</footer>
+
+    <script>
+        // Fade in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                appearOnScroll.unobserve(entry.target);
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Mobile menu open/close
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuPanel = document.getElementById('menuPanel');
+        const closeMenuBtn = document.getElementById('closeMenu');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                menuPanel.classList.remove('-translate-x-full');
+            }, 10);
+        }
+
+        function closeMobileMenu() {
+            menuPanel.classList.add('-translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        }
+
+        menuBtn.addEventListener('click', openMobileMenu);
+        closeMenuBtn.addEventListener('click', closeMobileMenu);
+
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close menu when clicking nav links on mobile
+        document.querySelectorAll('#menuPanel nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                closeMobileMenu();
+            });
+        });
+
+        // Copy+Contest Menu disabled
+         document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+    </script>
+
+</body>
+</html>
